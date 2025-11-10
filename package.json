@@ -1,0 +1,23 @@
+{
+  "name": "poxedex-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /poxedex-viewer/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rostyslav-afk/Poxedex-Viewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rostyslav-afk/Poxedex-Viewer/issues"
+  },
+  "homepage": "https://github.com/Rostyslav-afk/Poxedex-Viewer#readme",
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
