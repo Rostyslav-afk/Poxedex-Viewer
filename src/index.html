@@ -8,6 +8,10 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
             integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../node_modules/@pnotify/core/dist/PNotify.css"
+            rel="stylesheet" type="text/css" />
+        <link href="../node_modules/@pnotify/mobile/dist/PNotifyMobile.css"
+            rel="stylesheet" type="text/css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -17,6 +21,7 @@
     </head>
     <body>
         <div class="app">
+            <!-- INPUT -->
             <h1 class="app-title">Pokedex Viewer</h1>
             <div class="app-input_group">
                 <svg class="app-input_icon" aria-hidden="true"
@@ -28,32 +33,17 @@
                 </svg>
                 <input placeholder="Search" type="search" class="app-input">
             </div>
-            <ul class="app-guessing_list">
-                <!-- EXAMPLE FOR GUESS -->
-                <!-- <li class="app-guessing_list-item">
-                    <h3 class="app-guessing_list-subtitle">Guess</h3>
-                </li> -->
-            </ul>
-            <div class="app-card">
+            <!-- CARD -->
+             <div class="app-card-space"></div>
+            <!-- <div class="app-card">
                 <div class="card-text_info">
                     <h1 class="card-title">Name</h1>
                     <h2 class="card-subtitle">Id: 1233</h2>
                     <h2 class="card-subtitle_abilities">Abilities:</h2>
                     <ul class="card-list_abilities">
-                        <!-- EXAMPLE FOR ABILITIES ITEM -->
-                        <!-- <li class="card-list_abilities-item">
-                            <h3 class="card-list_abilities-subtitle">Ability:
-                                static</h3>
-                            <h3 class="card-list_abilities-subtitle">Is hidden:
-                                True</h3>
-                        </li> -->
                     </ul>
-                     <h2 class="card-subtitle_stats">Stats:</h2>
+                    <h2 class="card-subtitle_stats">Stats:</h2>
                     <ul class="card-list_stats">
-                        <!-- EXAMPLE FOR STATS ITEM -->
-                        <!-- <li class="card-list_stats-item"><h3
-                                class="card-list_stats-subtitle">Hp: 50</h3>
-                        </li> -->
                     </ul>
                 </div>
                 <div class="card-image_info">
@@ -62,7 +52,7 @@
                         alt="Pokemon Image!" class="card-image" width="350"
                         height="400">
                 </div>
-            </div>
+            </div> -->
         </div>
         <script type="module" src="./app.js"></script>
     </body>

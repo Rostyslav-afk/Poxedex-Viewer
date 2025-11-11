@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Rostyslav-afk/Poxedex-Viewer#readme",
   "devDependencies": {
-    "parcel": "^2.16.1"
+    "parcel": "^2.16.1",
+    "pnotify": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
   }
 }
