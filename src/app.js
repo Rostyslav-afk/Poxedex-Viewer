@@ -1,0 +1,1 @@
+import getPokeInfo from "./getPokeInfo"
