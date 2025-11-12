@@ -30,6 +30,8 @@ function searchPokeFunc(evt) {
     const abilitiesArray = Object.values(abilities);
     const statsArray = Object.values(stats);
 
+    console.log(abilitiesArray);
+
     appCardSpace.innerHTML = `
          <div class="app-card">
                 <div class="card-text_info">
@@ -37,17 +39,19 @@ function searchPokeFunc(evt) {
                     <h2 class="card-subtitle">Id: ${id}</h2>
                     <h2 class="card-subtitle_abilities">Abilities:</h2>
                     <ul class="card-list_abilities">
-                      ${abilitiesArray.map(
-                        (
-                          ability,
-                          is_hidden
-                        ) => `<li class="card-list_abilities-item">
+                      ${abilitiesArray
+                        .map(
+                          ({
+                            ability,
+                            is_hidden,
+                          }) => `<li class="card-list_abilities-item">
                             <h3 class="card-list_abilities-subtitle">Ability:
                                 ${ability}</h3>
                             <h3 class="card-list_abilities-subtitle">Is hidden:
                                 ${is_hidden}</h3>
                         </li>`
-                      ).join("")}
+                        )
+                        .join("")}
                     </ul>
                     <h2 class="card-subtitle_stats">Stats:</h2>
                     <ul class="card-list_stats">
@@ -76,4 +80,3 @@ function capitalizeFirstLetter(string) {
   if (!string) return "";
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
