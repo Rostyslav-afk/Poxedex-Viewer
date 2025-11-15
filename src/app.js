@@ -29,8 +29,8 @@ function searchPokeFunc(evt) {
 
     const abilitiesArray = Object.values(abilities);
     const statsArray = Object.values(stats);
-
-    console.log(abilitiesArray);
+    const spriteArray = Object.values(sprites.other);
+    const firstSprite = spriteArray[0];
 
     appCardSpace.innerHTML = `
          <div class="app-card">
@@ -40,26 +40,29 @@ function searchPokeFunc(evt) {
                     <h2 class="card-subtitle_abilities">Abilities:</h2>
                     <ul class="card-list_abilities">
                       ${abilitiesArray
-                        .map(
-                          ({
-                            ability,
-                            is_hidden,
-                          }) => `<li class="card-list_abilities-item">
-                            <h3 class="card-list_abilities-subtitle">Ability:
-                                ${ability}</h3>
-                            <h3 class="card-list_abilities-subtitle">Is hidden:
-                                ${is_hidden}</h3>
-                        </li>`
-                        )
+                        .map(({ ability, is_hidden }) => {
+                          const abil = Object.values(ability);
+                          return `<li class="card-list_abilities-item">
+                           <h3 class="card-list_abilities-subtitle">Ability: ${abil[0]}</h3>
+                           <h3 class="card-list_abilities-subtitle">Is hidden: ${is_hidden}</h3> </li>`;
+                        })
                         .join("")}
                     </ul>
                     <h2 class="card-subtitle_stats">Stats:</h2>
                     <ul class="card-list_stats">
+                        ${statsArray
+                          .map(({ base_stat, stat }) => {
+                            // stat.name - імя стати, base_stat - цифра для стати
+                            return `<li class="card-list_stats-item">
+                            <h3 class="card-list_stats-subtitle">${stat.name}: ${base_stat}</h3>
+                          </li>`;
+                          })
+                          .join("")}
                     </ul>
                 </div>
                 <div class="card-image_info">
                     <img
-                        src="#"
+                        src="${firstSprite.front_default}"
                         alt="Pokemon Image!" class="card-image" width="350"
                         height="400">
                 </div>
