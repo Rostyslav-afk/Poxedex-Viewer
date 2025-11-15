@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "dev": "npx parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /poxedex-viewer/"
+    "build": "parcel build src/index.html --public-url /poxedex-viewer/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/Rostyslav-afk/Poxedex-Viewer#readme",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.16.1",
     "pnotify": "^5.2.0"
   },
