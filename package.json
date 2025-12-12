@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Rostyslav-afk/Poxedex-Viewer/issues"
   },
-  "homepage": "https://github.com/Rostyslav-afk/Poxedex-Viewer#readme",
+  "homepage": "https://Rostyslav-afk.github.io/Poxedex-Viewer/",
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "parcel": "^2.16.1",
